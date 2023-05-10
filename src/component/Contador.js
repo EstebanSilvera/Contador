@@ -3,11 +3,9 @@ import React, { useState } from 'react'
 const Contador = () => {
 
     const [contador, setContador] = useState(0)
-    const [id, setId] = useState(0)
 
     const autoContador = () => {
         setContador((prevContador) => prevContador + 1)
-        console.log(contador)
     }
 
     return (
@@ -24,7 +22,6 @@ const Contador = () => {
 
                         <button onClick={() => {
                             setInterval(autoContador, 1000);
-                            setId(id + 1)
                         }} className='auto'>AUTO INCREASE</button>
                     </div>
 
